@@ -1,0 +1,28 @@
+{{> header}}
+<section class="NLab-post">
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <div class="content-post">
+          <div class="gobackto">
+            {{> gobackto}}
+          </div>
+          <div class="title-content">
+            <h2>{{title_post}}</h2>
+          </div>
+          <div class="image">
+            <img src="{{image}}" class="img-responsive">
+          </div>
+          <div class="body-content">
+            <p>{{content_post}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <aside class="aside-nlab">
+          {{> actionsButtons}}
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>

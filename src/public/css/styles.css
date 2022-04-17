@@ -1,8 +1,240 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@100;300;400;700&display=swap');
+body{
+  background-color:#000;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 100px;
+}
+.header-blog{
+  background-color: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 1rem 0;
+  border-bottom: 2px solid #D98880;
+  z-index: 99;
+}
+.img-responsive{
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+.home-NLab{
+  padding: 2.5rem 0;
+  position: relative;
+}
+.main-menu{
+  padding-top: 0;
+  padding-bottom: 0;
+  justify-content: flex-end;
+  height: 100%;
+}
+.main-menu .navbar-nav{
+  flex-direction: row;
+}
+.main-menu .navbar-nav .nav-item .nav-link{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  color: #55B9D9;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.main-menu .navbar-nav .nav-item .nav-link::before{
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #D98880;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-101%);
+  transition: transform ease-in-out 0.4s;
+}
+.main-menu .navbar-nav .nav-item .nav-link:hover::before{
+  transform: translateX(0);
+  transition: transform ease-in-out 0.4s;
+}
+.home-NLab .title-section h2{
+  color: #FFF;
+  font-size: 2.5em;
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.card-nlab{
+  background-color: #000;
+  border:3px solid #55B9D9;
+  border-radius: 0;
+  padding: 0;
+  position: relative;
+  transform: scale(1, 1);
+  transition: all ease-in 0.4s;
+  margin-bottom: 90px;
+  margin-top: 30px;
+}
+.card-nlab .card-body{
+  padding: 0;
+}
+.card-nlab:hover {
+  transform: scale(1.05, 1.05);
+  transition: all ease-in 0.4s;
+}
+.nlab-body{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.card-nlab .card-body .nlab-body h3.card-title{
+  color: #FFF;
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.card-nlab .card-body .nlab-body p.card-text{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  color: #FFFF;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.card-nlab .card-body .btn-nlab{
+  position: absolute;
+  top: calc(100% + 3px);
+  left: -3px;
+  z-index: 99;
+  width: calc(100% + 6px);
+  border-radius: 0;
+  border:3px solid #D98880;
+  color: #D98880;
+  background-color: #000;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 1.3em;
+  font-family: 'Press Start 2P', cursive;
+}
+.NLab-post{
+  padding: 2.5rem 0;
+  position: relative;
+}
+.NLab-post .gotbackto,
+.about-nlab .gotbackto,
+.home-NLab .gotbackto{
+  font-size: 1em;
+  font-family: 'Press Start 2P', cursive;
+  color: #D9D280;
+  text-transform: uppercase;
+}
+.NLab-post .title-content h2{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 3em;
+  font-family: 'Press Start 2P', cursive;
+  color: #55B9D9;
+  text-transform: uppercase;
+}
+.NLab-post .title-content{
+  margin-bottom: 30px;
+}
+.NLab-post .image{
+  margin-bottom: 30px;
+}
+.NLab-post .body-content p{
+  color: #FFFF;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.widget-action{
+  padding: 2rem;
+  margin-bottom: 30px;
+  text-align: right;
+}
+.widget-action .descript{
+  font-size: 1em;
+  font-family: 'Press Start 2P', cursive;
+  color: #FFF;
+}
+.widget-action .updateButton{
+  margin-bottom: 15px;
+}
+.widget-action .updateButton .btn-primary{
+  border:3px solid #55B9D9;
+  color: #55B9D9;
+  background-color: #000;
+  font-size: 1em;
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  padding: 0.5rem 1.25rem;
+}
+.widget-action .removeButton .btn-danger{
+  border:3px solid #D98880;
+  color: #D98880;
+  background-color: #000;
+  font-size: 1em;
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  padding: 0.5rem 1.25rem;
+}
+.post-form-nlab{
+  border:3px dotted #D9D280;
+  padding: 1rem;
+  background-color: #000;
+  margin-bottom: 30px;
+}
+.post-form-nlab .form-control{
+  color: #FFFF;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  background-color: #000;
+  border-radius: 0;
+  border:1px solid #55B9D9;
+}
+.post-form-nlab .form-text{
+  color: #D9D280;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+.post-form-nlab .btn-primary{
+  border:3px solid #55B9D9;
+  color: #55B9D9;
+  background-color: #000;
+  font-size: 1em;
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  padding: 0.5rem 1.25rem;
+}
+.about-nlab{
+  padding: 2.5rem 0;
+  position: relative;
+}
+.about-nlab .text h3{
+  font-size: 1em;
+  font-family: 'Press Start 2P', cursive;
+  color: #FFF;
+}
+.about-nlab .text p{
+  color: #FFFF;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }

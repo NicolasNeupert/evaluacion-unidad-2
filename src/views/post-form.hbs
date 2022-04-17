@@ -1,0 +1,60 @@
+{{> header}}
+<section class="home-NLab">
+  <div class="container">
+    {{#if id}}
+    <div class="row">
+      <div class="col-12">
+        <div class="gobackto">
+          {{> gobackto}}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="title-section">
+          <h2>Editor de NLAB POST</h2>
+        </div>
+      </div>
+    </div>
+    {{else}}
+    <div class="row">
+      <div class="col-12">
+        <div class="title-section">
+          <h2>New NLAB POST</h2>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+    <div class="row">
+      <div class="col-8">
+        <div class="post-form-nlab">
+          <form action="/post/{{#if id}}{{id}}/update{{else}}create{{/if}}" method="POST">
+            <div class="mb-3">
+              <input type="text" class="form-control" name="title" placeholder="Ingrese título de NLAB Post" required="true" value="{{title}}">
+              <div class="form-text">Utiliza un título ingenioso</div>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" name="content" rows="7" placeholder="Ingrese texto de NLAB Post">{{content}}</textarea>
+              <div class="form-text">¿Que quieres contar al mundo?</div>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" name="image" placeholder="Ingrese url de imagen destacada NLAB Post" required="true" value="{{image}}">
+              <div class="form-text">800x300</div>
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container mt-3">
+  
+  <!--
+    Este formulario se usará tanto para edición como creación, este if nos dice que si viene un id, entonces será un update, si no, será un create.
+    Para el action, si viene un id será un post a /articles/:id/update, si no, será un post a /articles/create.
+  -->
+  
+</div>
