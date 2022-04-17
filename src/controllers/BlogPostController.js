@@ -24,7 +24,7 @@ class BlogPostController {
 
     try {
       const post = await this.blogPostDao.getById(id)
-
+      const date = new Date(post.created_at_post).toISOString().slice(0, 10)
       if (!post) {
         res.status(404).render('404')
         return
@@ -34,7 +34,8 @@ class BlogPostController {
         id,
         title_post: post.title_post,
         content_post: post.content_post,
-        image: post.featured_image
+        image: post.featured_image,
+        timestamp: date
       })
     } catch (error) {
       console.log(error)

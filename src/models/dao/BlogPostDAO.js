@@ -15,7 +15,7 @@ class BlogPostDAO {
   }
 
   async getById (id) {
-    const response = await this.db.query('SELECT id, title_post, content_post, featured_image FROM post WHERE id = ?', [id])
+    const response = await this.db.query('SELECT id, title_post, content_post, featured_image, created_at_post FROM post WHERE id = ?', [id])
     const rows = response[0]
     return rows[0]
   }

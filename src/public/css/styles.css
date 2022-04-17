@@ -145,8 +145,14 @@ body{
   margin-bottom: 0;
   font-size: 3em;
   font-family: 'Press Start 2P', cursive;
-  color: #55B9D9;
+  color: #FFF;
   text-transform: uppercase;
+}
+.NLab-post .title-content small{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Press Start 2P', cursive;
+  color: #FFF;
 }
 .NLab-post .title-content{
   margin-bottom: 30px;
